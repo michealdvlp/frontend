@@ -1,5 +1,5 @@
 // API base URL - change to your local server address for testing
-const API_BASE_URL = 'https://healthmatebackend-one.vercel.app/';
+const API_BASE_URL = 'https://cjid-hackathon-healthmate-ai.onrender.com';
 
 // Update the checkSymptoms function to work with the new HTML structure
 async function checkSymptoms() {
