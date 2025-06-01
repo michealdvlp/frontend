@@ -1,98 +1,134 @@
-# HealthMate AI Frontend
+# HealthMate AI 2.0
 
-This directory contains the frontend codebase for the HealthMate AI project, a multilingual health assistant designed to provide reliable health information in multiple Nigerian languages.
+![HealthMate AI Logo](https://via.placeholder.com/150?text=HealthMate+AI)
 
 ## 📋 Overview
 
-The HealthMate AI frontend provides a user-friendly interface for interacting with the HealthMate AI system. It includes pages for:
+HealthMate AI is a multilingual health assistant designed to provide reliable health information and guidance in multiple Nigerian languages. It combines advanced AI technologies to deliver personalized health advice, symptom analysis, and health awareness content.
 
-- Home page with introduction and navigation
-- Health chat interface for direct AI interactions
-- Symptom checker
-- Health tips and facts
-- Health awareness resources
-- User authentication
+> ⚠️ **Disclaimer**: HealthMate AI is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+
+## ✨ Features
+
+- **Multilingual Health Analysis**: Process health queries in English, Igbo, Yoruba, Hausa, and Nigerian Pidgin
+- **Symptom Analysis**: Identify symptoms, body parts, and medical terms from user descriptions
+- **Health Facts & Tips**: Retrieve relevant health information and wellness tips
+- **Health Awareness Content**: Access educational content on various health topics
+- **Translation Services**: Automatically translate content between supported languages
+- **User-friendly Interface**: Simple and intuitive web interface for all users
 
 ## 🛠️ Technology Stack
 
+### Backend
+- Python 3.10+
+- Flask (Web framework)
+- OpenAI API (AI processing)
+- Azure Cognitive Services (Language detection, translation, health entity recognition)
+
+### Frontend
 - HTML5, CSS3, JavaScript
 - Firebase (Authentication and storage)
-- Node.js server for local testing
 
-## 🚀 Getting Started
+## 🚀 Installation
 
 ### Prerequisites
-- Node.js and npm
-- Firebase account (for authentication features)
+- Python 3.10 or higher
+- Node.js and npm (for frontend development)
+- API keys for OpenAI and Azure services
 
-### Installation
+### Backend Setup
 
-1. Install dependencies:
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/healthmate-ai.git
+cd healthmate-ai
+```
+
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Create a `.env` file based on `.env.example` and add your API keys:
+```
+AZURE_TRANSLATOR_KEY=your_translator_key_here
+AZURE_TRANSLATOR_ENDPOINT=your_translator_endpoint_here
+OPENAI_API_KEY=your_openai_key_here
+AZURE_LANGUAGE_KEY=your_language_key_here
+AZURE_LANGUAGE_ENDPOINT=your_language_endpoint_here
+```
+
+5. Start the backend server:
+```bash
+cd backend
+python app.py
+```
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+```bash
+cd frontend
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Set up Firebase:
-   - Create a Firebase project at https://console.firebase.google.com/
-   - Set up Authentication with email/password method
-   - Create a web app in your Firebase project
-   - Download your Firebase configuration
-   - Create a file named `firebase-config.js` with your Firebase configuration
-
-3. Start the development server:
+3. Start the frontend server:
 ```bash
 node server.js
 ```
 
 4. Access the application at http://localhost:3000
 
-## 📂 Project Structure
+## 📖 Usage
 
-- `index.html` - Main landing page
-- `chat.html` - Health chatbot interface
-- `symptoms.html` - Symptom checker
-- `tips.html` - Health tips and facts
-- `awareness.html` - Health awareness resources
-- `history.html` - Chat history for logged-in users
-- `login.html` - User authentication
-- `quiz.html` - Health knowledge quiz
-- `styles.css`, `index.css`, `chat.css`, `symptoms.css` - Styling files
-- `app.js` - Main application JavaScript
-- `chatbot.js` - Chatbot functionality
-- `awareness.js` - Awareness page functionality
-- `server.js` - Local development server
+1. **Health Queries**: Type your health concern in any supported language in the chat interface
+2. **Symptom Checker**: Navigate to the Symptoms page to check specific symptoms
+3. **Health Tips**: Explore the Tips page for health advice and wellness information
+4. **Health Awareness**: Learn about various health topics on the Awareness page
 
-## 🔌 API Integration
+## 🔌 API Reference
 
-The frontend interacts with the HealthMate AI backend API. Key integrations include:
+HealthMate AI provides several API endpoints for integration with other applications. For detailed API documentation, see [API_DOCS.md](API_DOCS.md).
 
-- Health analysis queries
-- Language detection and translation
-- Health facts retrieval
-- Awareness content retrieval
+Key endpoints include:
+- `/api/health/analyze` - Analyze health concerns
+- `/api/health/languages` - Get supported languages
+- `/api/health/facts` - Get health facts
+- `/api/health/awareness/content` - Get health awareness content
 
-## 🔒 Security Considerations
+## 🤝 Contributing
 
-- Firebase authentication is used for user management
-- Sensitive keys should be stored in environment variables, not in the codebase
-- CORS is enabled on the backend to allow frontend requests
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 🖼️ UI/UX Design
-
-The interface is designed to be:
-- Accessible to users with various levels of technical expertise
-- Mobile-responsive for use on different devices
-- Clearly labeled with a disclaimer about medical advice
-- Simple and intuitive to navigate
-
-## 🧪 Testing
-
-To test the frontend:
-1. Ensure the backend server is running
-2. Start the frontend server with `node server.js`
-3. Navigate to the different pages and test functionality
-4. Test with different languages if testing multilingual features
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](frontend/LICENSE) file for details.
+
+## 👥 Team
+
+- CJID AI Hackathon Team Hertz
+
+## 🙏 Acknowledgements
+
+- OpenAI for providing the AI capabilities
+- Azure Cognitive Services for language processing features
+- Contributors and supporters of the CJID AI Hackathon
