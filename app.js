@@ -1,5 +1,5 @@
 // API base URL - change to your local server address for testing
-const API_BASE_URL = 'https://cjid-healthmate-ai-2onrender.com';
+const API_BASE_URL = 'https://healthmatebackendm.vercel.app';
 
 // Update the checkSymptoms function to work with the new HTML structure
 async function checkSymptoms() {
